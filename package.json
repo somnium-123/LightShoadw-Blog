@@ -1,0 +1,46 @@
+{
+  "name": "movie-blog",
+  "version": "1.0.0",
+  "description": "豆瓣电影博客小程序",
+  "scripts": {
+    "dev:mp-weixin": "uni -p mp-weixin",
+    "dev:h5": "uni",
+    "build:mp-weixin": "uni build -p mp-weixin",
+    "build:h5": "uni build",
+    "lint": "eslint --ext .ts,.js,.vue src/",
+    "format": "prettier --write \"src/**/*.{ts,js,vue,scss}\""
+  },
+  "dependencies": {
+    "pinia": "^2.1.7",
+    "vue": "^3.4.0",
+    "@dcloudio/uni-app": "3.0.0-alpha-5000820260508001",
+    "@dcloudio/uni-app-plus": "3.0.0-alpha-5000820260508001",
+    "@dcloudio/uni-components": "3.0.0-alpha-5000820260508001",
+    "@dcloudio/uni-h5": "3.0.0-alpha-5000820260508001",
+    "@dcloudio/uni-mp-weixin": "3.0.0-alpha-5000820260508001",
+    "@dcloudio/uni-ui": "^1.5.6"
+  },
+  "devDependencies": {
+    "@dcloudio/types": "^3.4.0",
+    "@dcloudio/uni-automator": "3.0.0-alpha-5000820260508001",
+    "@dcloudio/uni-cli-shared": "3.0.0-alpha-5000820260508001",
+    "@dcloudio/vite-plugin-uni": "3.0.0-alpha-5000820260508001",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.50.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.0.0",
+    "prettier": "^3.0.0",
+    "sass": "^1.69.0",
+    "typescript": "^5.3.0",
+    "vite": "^5.0.0"
+  },
+  "lint-staged": {
+    "*.{ts,js,vue}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
+}

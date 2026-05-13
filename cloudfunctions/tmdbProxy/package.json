@@ -1,0 +1,9 @@
+{
+  "name": "tmdbProxy",
+  "version": "1.0.0",
+  "description": "TMDB API 代理云函数",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "latest"
+  }
+}

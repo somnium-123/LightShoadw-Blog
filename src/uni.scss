@@ -1,0 +1,9 @@
+@import '@/styles/variables.scss';
+
+/* uni-app 默认变量覆盖 */
+$uni-color-primary: $accent;
+$uni-color-success: $btn-green;
+$uni-color-warning: $accent;
+$uni-bg-color: $bg-primary;
+$uni-text-color: $text-primary;
+$uni-text-color-grey: $text-secondary;

@@ -1,0 +1,83 @@
+// ===== MovieBlog — Light Theme Design Tokens =====
+
+// Brand colors
+$color-primary: #FF6B6B;
+$color-primary-light: #FF8E8E;
+$color-primary-dark: #E55A5A;
+$color-primary-gradient: linear-gradient(135deg, #FF6B6B, #FF8E53);
+
+// Secondary & accent
+$color-secondary: #FFA500;
+$color-accent: #6C5CE7;
+
+// Backgrounds
+$bg-primary: #FFFFFF;
+$bg-secondary: #F5F5F5;
+$bg-card: #FFFFFF;
+$bg-dark: #1a1a1a;
+
+// Text
+$text-primary: #333333;
+$text-secondary: #666666;
+$text-muted: #999999;
+$text-inverse: #FFFFFF;
+
+// Borders & dividers
+$border-color: #EEEEEE;
+$divider: #F0F0F0;
+
+// Legacy aliases (for backward compat in unscoped styles)
+$bg-deep: #F5F5F5;
+$bg-elevated: #FFFFFF;
+$bg-card-hover: #FAFAFA;
+$bg-glass: rgba(0, 0, 0, 0.03);
+$accent: $color-primary;
+$accent-light: $color-primary-light;
+$accent-dark: $color-primary-dark;
+$accent-glow: rgba($color-primary, 0.15);
+$rating: $color-secondary;
+$btn-green: #00B600;
+$btn-green-dark: #009A00;
+$overlay: rgba(0, 0, 0, 0.5);
+$overlay-light: rgba(0, 0, 0, 0.2);
+
+// Spacing
+$spacing-xs: 8rpx;
+$spacing-sm: 16rpx;
+$spacing-md: 24rpx;
+$spacing-lg: 32rpx;
+$spacing-xl: 40rpx;
+$spacing-xxl: 48rpx;
+
+// Radius
+$radius-xs: 4rpx;
+$radius-sm: 8rpx;
+$radius-md: 16rpx;
+$radius-lg: 24rpx;
+$radius-xl: 40rpx;
+$radius-full: 9999rpx;
+
+// Shadows
+$shadow-card: 0 4rpx 16rpx rgba(0, 0, 0, 0.06);
+$shadow-elevated: 0 8rpx 32rpx rgba(0, 0, 0, 0.1);
+
+// Typography
+$font-xs: 20rpx;
+$font-sm: 24rpx;
+$font-md: 28rpx;
+$font-lg: 32rpx;
+$font-xl: 38rpx;
+$font-xxl: 48rpx;
+$font-huge: 60rpx;
+
+$font-display: 'Georgia', 'Times New Roman', serif;
+$font-body: -apple-system, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+
+// Transition
+$transition-fast: 0.15s ease;
+$transition-smooth: 0.25s ease;
+$transition-spring: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+// Poster
+$poster-width: 180rpx;
+$poster-height: 240rpx;
