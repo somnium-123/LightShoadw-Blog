@@ -1,4 +1,4 @@
-# 光影博客 · MovieBlog
+# 光影博客 · LightShadow-Blog
 
 基于 TMDB API 的跨端电影发现与记录小程序，支持 **H5 网页** 和 **微信小程序**。
 
@@ -36,7 +36,6 @@
 - **浅色清新风格** — 白色卡片 + 轻微阴影，粉色系强调色 (#FF6B6B)
 - **左图右文卡片布局** — 电影海报 + 评分 + 类型 + 操作按钮
 - **Canvas 图表** — 评分分布柱状图、月度观影趋势、片长占比图
-- 圆角胶囊按钮、渐变入口网格、自定义导航栏
 
 ---
 
@@ -102,7 +101,7 @@ movie-blog/
 
 ```bash
 # 克隆项目
-git clone https://github.com/your-org/movie-blog.git
+git clone https://github.com/somnium-123/LightShoadw-Blog.git
 cd movie-blog
 
 # 安装依赖
@@ -115,10 +114,6 @@ npm run dev:h5          # → http://localhost:5173
 npm run dev:mp-weixin   # 持续编译到 dist/dev/mp-weixin
 # 微信开发者工具 → 导入 → 选择 dist/dev/mp-weixin 目录
 # 开发阶段勾选「不校验合法域名」
-
-# 代码检查
-npm run lint
-npm run format
 ```
 
 ### 配置 TMDB API
@@ -133,14 +128,6 @@ VITE_USE_MOCK=false
 ```
 
 > **国内用户注意**：使用 `api.tmdb.org` 和 `images.tmdb.org` 替代 `api.themoviedb.org`。
-
-### 微信小程序生产部署
-
-1. 微信公众平台后台 → 开发管理 → 服务器域名 → 添加：
-   - request 合法域名：`api.tmdb.org`
-   - downloadFile 合法域名：`images.tmdb.org`
-2. `VITE_USE_MOCK=false` → `npm run build:mp-weixin`
-3. 微信开发者工具 → 上传 → 提交审核
 
 ---
 
@@ -163,14 +150,7 @@ VITE_USE_MOCK=false
 ├─────────────────────────────┤
 │  Filter Bar (Tab + 搜索)    │
 ├─────────────────────────────┤
-│  Movie List                 │
-│  ┌────┬──────────────────┐  │
-│  │海报│ 片名 · 评分 · 类型  │  │
-│  │    │ [想看] [看过]      │  │
-│  └────┴──────────────────┘  │
-│  ┌────┬──────────────────┐  │
-│  │    │  ...               │  │
-│  └────┴──────────────────┘  │
+│  Movie List (左图右文卡片)   │
 ├─────────────────────────────┤
 │  TabBar (首页 / 我的)        │
 └─────────────────────────────┘
@@ -180,12 +160,12 @@ VITE_USE_MOCK=false
 
 ## 开发笔记
 
-- **跨端 HTTP**：统一使用 `uni.request`（H5 映射为 `XMLHttpRequest`，小程序映射为 `wx.request`），避免 `fetch` 在小程序中不可用
-- **Mock 数据**：`.env` 中 `VITE_USE_MOCK=true` 启用内置 mock，无需 API Key 即可开发
-- **Vue API 导入**：`ref` / `computed` 从 `vue` 导入，生命周期 (`onLoad` / `onReady`) 从 `@dcloudio/uni-app` 导入，H5 模式下两者不可混用
+- **跨端 HTTP**：统一使用 `uni.request`，避免 `fetch` 在小程序中不可用
+- **Mock 数据**：`.env` 中 `VITE_USE_MOCK=true` 启用内置 mock，无需 API Key
+- **Vue API 导入**：`ref` / `computed` 从 `vue` 导入，生命周期从 `@dcloudio/uni-app` 导入
 - **TabBar 页面**：微信小程序规定必须在主包 `pages` 数组中，不能放 `subPackages`
-- **Canvas 2D**：小程序端使用 `type="2d"` 获取新 API，通过 `uni.createSelectorQuery()` 获取节点
-- **图片 CDN**：`image.tmdb.org` 在国内 DNS 解析异常，使用 `images.tmdb.org`（复数形式）
+- **Canvas 2D**：小程序端使用 `type="2d"` 通过 `uni.createSelectorQuery()` 获取节点
+- **图片 CDN**：国内使用 `images.tmdb.org`（复数形式）替代 `image.tmdb.org`
 
 ---
 
